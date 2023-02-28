@@ -1,6 +1,6 @@
-import * as React from "react"
-import type { PageProps } from "gatsby"
-import { Heading } from "@chakra-ui/react"
+import * as React from 'react'
+import type { PageProps } from 'gatsby'
+import { Heading } from '@chakra-ui/react'
 
 const IndexRoute = ({ path }: PageProps) => {
   return (
