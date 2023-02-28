@@ -21,6 +21,6 @@
     "./gatsby-node.ts",
     "./gatsby-config.ts",
     "./plugins/**/*",
-    "gatsby-browser.tsx"
+    "../gatsby-browser.tsx"
   ]
 }
