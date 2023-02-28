@@ -2,7 +2,7 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `gemma-wedding-2022`,
+    title: `My Gatsby Site`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -11,9 +11,14 @@ const config: GatsbyConfig = {
   graphqlTypegen: true,
   plugins: [
     "gatsby-plugin-netlify-cms",
-    "gatsby-plugin-emotion",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/images/icon.png",
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -24,14 +29,7 @@ const config: GatsbyConfig = {
       },
       __key: "images",
     },
-    {
-      resolve: "@chakra-ui/gatsby-plugin",
-      options: {
-        resetCSS: true,
-        isUsingColorMode: true,
-        isBaseProvider: false,
-      },
-    },
   ],
 };
+
 export default config;
