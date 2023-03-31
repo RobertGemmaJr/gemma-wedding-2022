@@ -4,9 +4,7 @@
   "private": true,
   "description": "gemma-wedding-2022",
   "author": "RobertGemmaJr",
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
@@ -14,7 +12,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "eslint .",
-    "format": "prettier --write --ignore-path  .eslintignore .",
+    "format": "eslint --fix .",
     "typecheck": "tsc -b",
     "prepare": "husky install"
   },
@@ -61,7 +59,6 @@
   "lint-staged": {
     "*,!*.yml": [
       "eslint --fix"
-    ],
-    "*.js": "eslint --cache --fix"
+    ]
   }
 }
