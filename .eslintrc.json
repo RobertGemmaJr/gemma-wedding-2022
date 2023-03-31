@@ -20,6 +20,11 @@
     "rules": {
         "prettier/prettier": 1 // Warning
     },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
     "env": {
         "browser": true,
         "es2021": true

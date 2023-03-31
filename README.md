@@ -4,63 +4,10 @@ Wedding Website created for the Gemma family
 
 ## TODO
 
-1. Add prettier
-2. Brand theme from Squarespace
-3. Grid (xma)
-4. Footer (xma)
-5. Header (xma based, just links)
-
-- We format with prettier
-- We lint with eslint
-
-### .prettierrc
-
-```json
-{
-  "semi": false,
-  "trailingComma": "all",
-  "singleQuote": false,
-  "jsxSingleQuote": false,
-  "printWidth": 100
-}
-```
-
-### .eslintrc
-
-```json
-{
-  "root": true,
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["prettier"],
-  "extends": ["eslint:recommended", "prettier"],
-  "rules": {
-    "prettier/prettier": 1 // Warning
-  },
-  "env": {
-    "browser": true,
-    "node": true
-  }
-}
-```
-
-### eslintignore
-
-```ignore
-node_modules
-.cache
-/build
-/public
-
-/.vscode
-/.env
-/.husky
-
-*.json
-*.toml
-*.loga
-.gitignore
-.prettierignore
-```
+1. Brand theme from Squarespace
+2. Grid (xma)
+3. Footer (xma)
+4. Header (xma based, just links)
 
 ## 🚀 Gatsby
 
