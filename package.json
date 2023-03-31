@@ -15,7 +15,8 @@
     "clean": "gatsby clean",
     "lint": "eslint .",
     "format": "prettier --write --ignore-path  .eslintignore .",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc -b",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@chakra-ui/gatsby-plugin": "^3.1.1",
@@ -46,6 +47,8 @@
     "eslint-plugin-prettier": "^4.2.1",
     "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-tsconfig-paths": "^1.0.6",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
     "prettier": "^2.8.7",
     "prettier-eslint": "^15.0.1",
     "ts-standard": "^12.0.2",
@@ -58,6 +61,7 @@
   "lint-staged": {
     "*,!*.yml": [
       "eslint --fix"
-    ]
+    ],
+    "*.js": "eslint --cache --fix"
   }
 }
