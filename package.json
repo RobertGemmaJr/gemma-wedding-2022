@@ -13,12 +13,13 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit",
-    "lint": "ts-standard",
-    "format": "ts-standard --fix"
+    "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
+    "format": "npm run lint -- --fix",
+    "typecheck": "ts-standard --fix"
   },
   "dependencies": {
     "@chakra-ui/gatsby-plugin": "^3.1.1",
+    "@chakra-ui/icons": "^2.0.18",
     "@chakra-ui/react": "^2.5.1",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.0.0",
@@ -35,16 +36,28 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/node": "^16.0.0",
+    "@types/eslint": "^8.4.6",
+    "@types/node": "^18.15.11",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "gatsby-plugin-netlify": "^5.1.0",
     "gatsby-plugin-tsconfig-paths": "^1.0.6",
+    "prettier": "^2.8.7",
+    "prettier-eslint": "^15.0.1",
     "ts-standard": "^12.0.2",
-    "typescript": "^4.9.5"
+    "typescript": "^5.0.3"
   },
   "overrides": {
     "react": "$react",
     "react-dom": "$react"
+  },
+  "lint-staged": {
+    "*,!*.yml": [
+      "eslint --fix"
+    ]
   }
 }

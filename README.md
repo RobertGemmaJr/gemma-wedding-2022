@@ -2,6 +2,14 @@
 
 Wedding Website created for the Gemma family
 
+## TODO
+
+1. Add prettier
+2. Brand theme from Squarespace
+3. Grid (xma)
+4. Footer (xma)
+5. Header (xma based, just links)
+
 ## 🚀 Gatsby
 
 This project is a static website developed with Gastby
