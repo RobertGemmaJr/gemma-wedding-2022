@@ -1,13 +1,7 @@
 node_modules
+.cache
 /build
-/public/build
-
-/coverage
-/cypress/screenshots
-/cypress/videos
-/mysql-data
-/sandbox_data
-/env
+/public
 
 /.vscode
 /.env

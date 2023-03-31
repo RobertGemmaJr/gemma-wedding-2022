@@ -1,4 +1,3 @@
-
-export function Layout () {
+export function Layout() {
   return null
 }

@@ -10,6 +10,58 @@ Wedding Website created for the Gemma family
 4. Footer (xma)
 5. Header (xma based, just links)
 
+- We format with prettier
+- We lint with eslint
+
+### .prettierrc
+
+```json
+{
+  "semi": false,
+  "trailingComma": "all",
+  "singleQuote": false,
+  "jsxSingleQuote": false,
+  "printWidth": 100
+}
+```
+
+### .eslintrc
+
+```json
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["prettier"],
+  "extends": ["eslint:recommended", "prettier"],
+  "rules": {
+    "prettier/prettier": 1 // Warning
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
+```
+
+### eslintignore
+
+```ignore
+node_modules
+.cache
+/build
+/public
+
+/.vscode
+/.env
+/.husky
+
+*.json
+*.toml
+*.loga
+.gitignore
+.prettierignore
+```
+
 ## 🚀 Gatsby
 
 This project is a static website developed with Gastby
