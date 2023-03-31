@@ -18,7 +18,7 @@
     ],
     "overrides": [],
     "rules": {
-        "prettier/prettier": 0 // Warning
+        "prettier/prettier": 1 // Warning
     },
     "env": {
         "browser": true,
