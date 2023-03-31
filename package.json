@@ -57,7 +57,7 @@
     "react-dom": "$react"
   },
   "lint-staged": {
-    "*,!*.yml": [
+    "**,!*.yml": [
       "eslint --fix"
     ]
   }
