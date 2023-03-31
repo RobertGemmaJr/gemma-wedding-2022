@@ -57,8 +57,6 @@
     "react-dom": "$react"
   },
   "lint-staged": {
-    "*": [
-      "eslint --fix"
-    ]
+    "*": ["eslint --fix"]
   }
 }
