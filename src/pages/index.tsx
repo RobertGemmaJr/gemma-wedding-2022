@@ -5,9 +5,7 @@ import { Heading } from '@chakra-ui/react';
 const IndexRoute: React.FC<PageProps> = ({ path }) => {
   return (
     <main>
-
-      
-      <Heading size="sm">Path: {path}</Heading>
+      <Heading size='sm'>Path: {path}</Heading>
     </main>
   );
 };
