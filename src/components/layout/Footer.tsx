@@ -1,8 +1,8 @@
-import { GridItem, Stack, HStack, Text } from '@chakra-ui/react';
 import { EmailIcon, InfoIcon } from '@chakra-ui/icons';
+import { GridItem, HStack, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
 
-// import { Logo, SocialButton } from "@components/common";
+import { SocialButton } from '@components/buttons';
 
 // The UI for this component is based on a Chakra template https://chakra-templates.dev
 export function Footer() {

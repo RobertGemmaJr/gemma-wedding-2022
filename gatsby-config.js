@@ -1,6 +1,4 @@
-import type { GatsbyConfig } from 'gatsby';
-
-const config: GatsbyConfig = {
+const config = {
   siteMetadata: {
     title: 'Gemma Wedding 2022',
     siteUrl: 'https://www.yourdomain.tld',
@@ -34,5 +32,4 @@ const config: GatsbyConfig = {
     },
   ],
 };
-
 export default config;
