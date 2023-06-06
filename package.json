@@ -8,13 +8,13 @@
     "gatsby"
   ],
   "scripts": {
-    "dev": "gatsby develop",
+    "dev": "DISPLAY=chrome gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "lint": "eslint .",
     "format": "npm run lint -- --fix",
-    "typecheck": "tsc -b",
+    "typecheck": "tsc -b -no-emit",
     "prepare": "husky install"
   },
   "dependencies": {
