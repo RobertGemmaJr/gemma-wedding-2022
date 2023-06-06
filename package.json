@@ -14,7 +14,6 @@
     "clean": "gatsby clean",
     "lint": "eslint .",
     "format": "npm run lint -- --fix",
-    "typecheck": "tsc -b -no-emit",
     "prepare": "husky install"
   },
   "dependencies": {

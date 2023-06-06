@@ -1,7 +1,6 @@
 import { Flex, type FlexProps } from '@chakra-ui/react';
 import React from 'react';
 
-// TODO: Ignore "no empty interface" warning
 export type LayoutFlexProps = FlexProps;
 export function LayoutFlex({ children, ...delegated }: LayoutFlexProps) {
   return (

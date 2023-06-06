@@ -9,12 +9,15 @@ import React from 'react';
 
 export interface LinkOverlayProps extends LinkBoxProps {
   href: ChakraLinkOverlayProps['href'];
+  isExternal?: ChakraLinkOverlayProps['isExternal'];
 }
 
 export const LinkOverlay = forwardRef<LinkOverlayProps, typeof LinkBox>(
-  ({ href, children, ...delegated }: LinkOverlayProps, ref) => (
+  ({ href, isExternal, children, ...delegated }: LinkOverlayProps, ref) => (
     <LinkBox ref={ref} {...delegated}>
-      <ChakraLinkOverlay href={href}>{children}</ChakraLinkOverlay>
+      <ChakraLinkOverlay href={href} isExternal={isExternal}>
+        {children}
+      </ChakraLinkOverlay>
     </LinkBox>
   )
 );
