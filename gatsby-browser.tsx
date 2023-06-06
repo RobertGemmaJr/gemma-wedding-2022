@@ -1,8 +1,8 @@
-import { ChakraProvider, Grid, Heading } from '@chakra-ui/react';
+import { ChakraProvider, Grid } from '@chakra-ui/react';
 import type { GatsbyBrowser } from 'gatsby';
 import React from 'react';
 
-import { Footer, Main } from '@components/layout';
+import { Header, Footer, Main } from '@components/layout';
 import theme from '@src/theme';
 
 export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({ element }) => {
@@ -15,7 +15,7 @@ export const wrapPageElement: GatsbyBrowser['wrapPageElement'] = ({ element }) =
         minWidth='100vw'
         maxWidth='100vw'
       >
-        <Heading />
+        <Header />
         <Main>{element}</Main>
         <Footer />
       </Grid>
