@@ -3,9 +3,9 @@ import {
   Collapse,
   GridItem,
   HStack,
+  Heading,
   IconButton,
   Stack,
-  Text,
   useDisclosure,
 } from '@chakra-ui/react';
 import React, { useMemo } from 'react';
@@ -16,9 +16,6 @@ import { NAV_ITEMS, NavLink } from './partials';
 
 import { LayoutFlex } from '.';
 
-// The UI for this component is based on Chakra's withDarkModeSwitcher and simple template
-// https://github.com/hauptrolle/chakra-templates/blob/main/src/pages/templates/navigation/navbar/withDarkModeSwitcher.tsx
-// https://github.com/hauptrolle/chakra-templates/blob/main/src/pages/templates/navigation/navbar/simple.tsx
 export function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -61,7 +58,7 @@ export function Header() {
 
         {/* Logo links to home page */}
         <LinkOverlay href='/'>
-          <Text>Gemma Wedding 2022</Text>
+          <Heading>Gemma Wedding 2022</Heading>
         </LinkOverlay>
 
         {/* nav on Desktop */}

@@ -1,5 +1,6 @@
 import { forwardRef, IconButton, type IconButtonProps } from '@chakra-ui/react';
 import React from 'react';
+import { FaInstagram } from 'react-icons/fa';
 
 import { LinkButton, LinkButtonProps } from '.';
 
@@ -15,6 +16,7 @@ export const SocialButton = forwardRef<SocialButtonProps, typeof LinkButton>(
       ref={ref}
       href={href}
       as={IconButton}
+      icon={FaInstagram}
       aria-label={ariaLabel}
       display='inline-flex'
       alignItems='center'

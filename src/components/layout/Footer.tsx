@@ -1,5 +1,4 @@
-import { EmailIcon, InfoIcon } from '@chakra-ui/icons';
-import { GridItem, Flex, Text, Heading } from '@chakra-ui/react';
+import { GridItem, Flex, Text, Spacer } from '@chakra-ui/react';
 import React from 'react';
 
 import { SocialButton } from '@components/buttons';
@@ -14,14 +13,20 @@ export function Footer() {
         direction={{ base: 'column', md: 'row' }}
         justify={{ base: 'center', md: 'space-between' }}
       >
-        <Heading>Logo Goes Here</Heading>
+        <Spacer />
+        <Flex gap='2'>
+          <SocialButton
+            aria-label='Link to Noras Instagram'
+            href='https://www.instagram.com/eleanor.j.gemma/'
+          />
+          <SocialButton
+            aria-label='Link to Robs Instagram'
+            href='https://www.instagram.com/robertgemmajr/'
+          />
+        </Flex>
         <Text textAlign='center' colorScheme='facebook'>
           © 2022 Robert Gemma
         </Text>
-        <Flex gap='2'>
-          <SocialButton aria-label='Contact Page' href='/contact' icon={<EmailIcon />} />
-          <SocialButton aria-label='Info' href='/info' icon={<InfoIcon />} />
-        </Flex>
       </LayoutFlex>
     </GridItem>
   );
