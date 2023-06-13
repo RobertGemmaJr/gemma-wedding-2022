@@ -1,19 +1,20 @@
-import { GridItem, Flex, Text, Spacer } from '@chakra-ui/react';
+import { GridItem, Flex, Text } from '@chakra-ui/react';
 import React from 'react';
 
 import { SocialButton } from '@components/buttons';
 import { LayoutFlex } from '@components/layout';
 
 // The UI for this component is based on a Chakra template https://chakra-templates.dev
+// TODO: Set buttons in center, copyright on the right
 export function Footer() {
+  const year = new Date().getFullYear();
   return (
     <GridItem area='footer' as='footer' bg='gray.200' color='gray.700'>
       <LayoutFlex
         // Footer stacks vertically on phones, horizontally otherwise
         direction={{ base: 'column', md: 'row' }}
-        justify={{ base: 'center', md: 'space-between' }}
+        justify={{ base: 'center', md: 'space-around' }}
       >
-        <Spacer />
         <Flex gap='2'>
           <SocialButton
             aria-label='Link to Noras Instagram'
@@ -25,7 +26,7 @@ export function Footer() {
           />
         </Flex>
         <Text textAlign='center' colorScheme='facebook'>
-          © 2022 Robert Gemma
+          © {year} Robert Gemma
         </Text>
       </LayoutFlex>
     </GridItem>
