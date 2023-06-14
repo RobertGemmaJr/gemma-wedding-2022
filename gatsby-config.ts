@@ -14,6 +14,7 @@ const config: GatsbyConfig = {
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-typescript',
     'gatsby-plugin-tsconfig-paths',
     {
       resolve: 'gatsby-source-filesystem',

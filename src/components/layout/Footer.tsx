@@ -1,31 +1,34 @@
-import { GridItem, Stack, HStack, Text } from '@chakra-ui/react';
-import { EmailIcon, InfoIcon } from '@chakra-ui/icons';
+import { GridItem, Flex, Text } from '@chakra-ui/react';
 import React from 'react';
 
-// import { Logo, SocialButton } from "@components/common";
+import { SocialButton } from '@components/buttons';
+import { LayoutFlex } from '@components/layout';
 
 // The UI for this component is based on a Chakra template https://chakra-templates.dev
+// TODO: Set buttons in center, copyright on the right
 export function Footer() {
+  const year = new Date().getFullYear();
   return (
     <GridItem area='footer' as='footer' bg='gray.200' color='gray.700'>
-      <Stack
-        maxW='7xl'
-        mx='auto'
-        p='5'
-        spacing='4'
-        align='center'
-        // Footer stacks vertically on phones
+      <LayoutFlex
+        // Footer stacks vertically on phones, horizontally otherwise
         direction={{ base: 'column', md: 'row' }}
-        justify={{ base: 'center', md: 'space-between' }}
+        justify={{ base: 'center', md: 'space-around' }}
       >
+        <Flex gap='2'>
+          <SocialButton
+            aria-label='Link to Noras Instagram'
+            href='https://www.instagram.com/eleanor.j.gemma/'
+          />
+          <SocialButton
+            aria-label='Link to Robs Instagram'
+            href='https://www.instagram.com/robertgemmajr/'
+          />
+        </Flex>
         <Text textAlign='center' colorScheme='facebook'>
-          © 2022 Brown University. All rights reserved
+          © {year} Robert Gemma
         </Text>
-        <HStack>
-          <SocialButton aria-label='Contact Page' href='/contact' icon={<EmailIcon />} />
-          <SocialButton aria-label='Info' href='/info' icon={<InfoIcon />} />
-        </HStack>
-      </Stack>
+      </LayoutFlex>
     </GridItem>
   );
 }
