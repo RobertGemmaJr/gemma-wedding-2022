@@ -1,7 +1,8 @@
 {
   "name": "gemma-wedding-2022",
-  "description": "Wedding website for Rob and Nora Gemma",
   "version": "0.0.1",
+  "description": "Wedding website for Rob and Nora Gemma",
+  "author": "RobertGemmaJr",
   "type": "module",
   "scripts": {
     "dev": "vite",
