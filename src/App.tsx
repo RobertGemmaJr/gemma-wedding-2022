@@ -5,7 +5,6 @@ import { useState } from "react";
 import reactLogo from "@src/assets/react.svg";
 import viteLogo from "/vite.svg";
 
-// TODO: typecheck, husky
 // TODO: Color mode
 // TODO: Eslint import order
 
