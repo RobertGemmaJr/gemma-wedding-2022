@@ -1,12 +1,13 @@
+import { Box, Heading, Link, Text } from "@chakra-ui/layout";
+import { Button, Image } from "@chakra-ui/react";
 import { useState } from "react";
 
 import reactLogo from "@src/assets/react.svg";
 import viteLogo from "/vite.svg";
-import { Box, Heading, Link, Text } from "@chakra-ui/layout";
-import { Button, Image } from "@chakra-ui/react";
 
 // TODO: typecheck, husky
 // TODO: Color mode
+// TODO: Eslint import order
 
 export default function App() {
   const [count, setCount] = useState(0);

@@ -11,7 +11,8 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "prepare": "husky install",
     "preview": "vite preview",
-    "theme": "chakra-cli tokens app/theme/theme.ts"
+    "theme": "chakra-cli tokens src/theme.ts",
+    "typecheck": "tsc -b"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
@@ -21,6 +22,7 @@
     "framer-motion": "^10.16.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
     "vite-tsconfig-paths": "^4.2.1"
   },
   "devDependencies": {
@@ -41,5 +43,11 @@
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
+  },
+  "lint-staged": {
+    "*": [
+      "eslint --fix",
+      "prettier --ignore-unknown --write"
+    ]
   }
 }

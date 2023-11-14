@@ -8,7 +8,7 @@ import {
   Stack,
   useDisclosure,
 } from "@chakra-ui/react";
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 
 import { LinkOverlay } from "@src/components";
 
