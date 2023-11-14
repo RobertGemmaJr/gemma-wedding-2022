@@ -1,4 +1,4 @@
-import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
+import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   Collapse,
   GridItem,
@@ -7,23 +7,23 @@ import {
   IconButton,
   Stack,
   useDisclosure,
-} from '@chakra-ui/react';
-import React, { useMemo } from 'react';
+} from "@chakra-ui/react";
+import React, { useMemo } from "react";
 
-import { LinkOverlay } from '@src/components';
+import { LinkOverlay } from "@src/components";
 
-import { NAV_ITEMS, NavLink } from './partials';
+import { NAV_ITEMS, NavLink } from "./partials";
 
-import { LayoutFlex } from '.';
+import { LayoutFlex } from ".";
 
 export function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const DesktopNavBar = useMemo(
     () => (
-      <HStack as='nav' display={{ base: 'none', md: 'flex' }}>
+      <HStack as="nav" display={{ base: "none", md: "flex" }}>
         {NAV_ITEMS.map((navItem) => (
-          <NavLink key={navItem.label} variant='desktop' navItem={navItem} />
+          <NavLink key={navItem.label} variant="desktop" navItem={navItem} />
         ))}
       </HStack>
     ),
@@ -33,9 +33,9 @@ export function Header() {
     () => (
       // TODO: Clicking on white space after collapse is registering the link click not closing the collapse
       <Collapse in={isOpen} animateOpacity>
-        <Stack as='nav' display={{ base: 'flex', md: 'none' }}>
+        <Stack as="nav" display={{ base: "flex", md: "none" }}>
           {NAV_ITEMS.map((navItem) => (
-            <NavLink key={navItem.label} variant='mobile' navItem={navItem} />
+            <NavLink key={navItem.label} variant="mobile" navItem={navItem} />
           ))}
         </Stack>
       </Collapse>
@@ -44,20 +44,20 @@ export function Header() {
   );
 
   return (
-    <GridItem area='header' as='header' bg='white'>
-      <LayoutFlex justifyContent='space-between'>
+    <GridItem area="header" as="header" bg="white">
+      <LayoutFlex justifyContent="space-between">
         {/* Dropdown button on Mobile */}
         <IconButton
-          size='md'
+          size="md"
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-          variant='ghost'
-          aria-label='Toggle Navigation'
-          display={{ base: 'block', md: 'none' }}
+          variant="ghost"
+          aria-label="Toggle Navigation"
+          display={{ base: "block", md: "none" }}
           onClick={isOpen ? onClose : onOpen}
         />
 
         {/* Logo links to home page */}
-        <LinkOverlay href='/'>
+        <LinkOverlay href="/">
           <Heading>Gemma Wedding 2022</Heading>
         </LinkOverlay>
 

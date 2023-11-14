@@ -1,2 +1,2 @@
-export * from './NavLink';
-export * from './navbar.constants';
+export * from "./NavLink";
+export * from "./navbar.constants";
