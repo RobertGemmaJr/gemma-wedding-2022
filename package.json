@@ -12,7 +12,7 @@
     "prepare": "husky install",
     "preview": "vite preview",
     "theme": "chakra-cli tokens src/theme.ts",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
