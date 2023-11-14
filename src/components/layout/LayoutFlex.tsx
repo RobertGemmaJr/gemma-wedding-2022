@@ -1,5 +1,4 @@
 import { Flex, type FlexProps } from '@chakra-ui/react';
-import React from 'react';
 
 export type LayoutFlexProps = FlexProps;
 export function LayoutFlex({ children, ...delegated }: LayoutFlexProps) {

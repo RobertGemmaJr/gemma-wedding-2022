@@ -5,7 +5,6 @@ import {
   forwardRef,
   type LinkBoxProps,
 } from '@chakra-ui/react';
-import React from 'react';
 
 export interface LinkOverlayProps extends LinkBoxProps {
   href: ChakraLinkOverlayProps['href'];

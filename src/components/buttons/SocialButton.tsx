@@ -1,5 +1,5 @@
 import { forwardRef, IconButton, type IconButtonProps } from '@chakra-ui/react';
-import React from 'react';
+
 import { FaInstagram } from 'react-icons/fa';
 
 import { LinkButton, LinkButtonProps } from '.';

@@ -1,6 +1,5 @@
 import { GridItem } from '@chakra-ui/react';
 import { LayoutFlex, type LayoutFlexProps } from '@components/layout';
-import React from 'react';
 
 export type MainProps = LayoutFlexProps;
 

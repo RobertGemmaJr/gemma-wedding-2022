@@ -1,5 +1,4 @@
 import { Button, forwardRef, type ButtonProps } from '@chakra-ui/react';
-import React from 'react';
 
 // TODO: Fix this? Just import from '@components'
 import { LinkOverlay, type LinkOverlayProps } from '@src/components';

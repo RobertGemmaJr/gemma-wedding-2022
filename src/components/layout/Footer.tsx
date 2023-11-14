@@ -1,5 +1,4 @@
 import { GridItem, Flex, Text } from '@chakra-ui/react';
-import React from 'react';
 
 import { SocialButton } from '@components/buttons';
 import { LayoutFlex } from '@components/layout';

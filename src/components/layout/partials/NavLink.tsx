@@ -13,10 +13,9 @@ import {
   useDisclosure,
   type BoxProps,
 } from '@chakra-ui/react';
-import React from 'react';
 
-import type { NavItem } from '.';
 import { LinkOverlay } from '@src/components';
+import type { NavItem } from '.';
 
 export interface NavLinkProps extends BoxProps {
   variant: 'desktop' | 'mobile';
