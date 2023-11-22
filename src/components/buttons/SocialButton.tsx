@@ -5,16 +5,16 @@ import { FaInstagram } from "react-icons/fa";
 import { LinkButton, LinkButtonProps } from ".";
 
 export interface SocialButtonProps extends IconButtonProps {
-  href: LinkButtonProps["href"];
+  to: LinkButtonProps["to"];
 }
 
 // The UI for this component is based on Chakra's smallWithLogoLeft template
 // https://github.com/hauptrolle/chakra-templates/blob/main/src/pages/templates/page-sections/footer/smallWithLogoLeft.tsx
 export const SocialButton = forwardRef<SocialButtonProps, typeof LinkButton>(
-  ({ href, "aria-label": ariaLabel, ...delegated }: SocialButtonProps, ref) => (
+  ({ to, "aria-label": ariaLabel, ...delegated }: SocialButtonProps, ref) => (
     <LinkButton
       ref={ref}
-      href={href}
+      to={to}
       as={IconButton}
       icon={<FaInstagram />}
       aria-label={ariaLabel}

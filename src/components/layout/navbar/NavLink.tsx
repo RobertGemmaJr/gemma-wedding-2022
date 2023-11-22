@@ -14,6 +14,8 @@ import {
   type BoxProps,
 } from "@chakra-ui/react";
 
+// TODO: RENAME THIS COMPONENT
+
 // TODO: These will just be links
 // import { LinkOverlay } from "@src/components";
 import type { NavItem } from ".";
@@ -41,7 +43,7 @@ const NavLinkBox = forwardRef<VariantLinkProps, typeof LinkBox>(
       >
         {/* LinkOverlay raises the z-index of the link, contained to LinkBox */}
         {/* TODO: These will just be links */}
-        <LinkButton href={href} />
+        <LinkButton to={href} />
         {children}
       </LinkBox>
     );

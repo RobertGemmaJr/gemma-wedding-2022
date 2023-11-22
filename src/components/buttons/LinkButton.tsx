@@ -1,8 +1,9 @@
-import { forwardRef, Button, type ButtonProps, Link, LinkProps } from "@chakra-ui/react";
+import { forwardRef, Button, type ButtonProps } from "@chakra-ui/react";
+import { NavLink, NavLinkProps } from "react-router-dom";
 
 /** Extension of {@link ButtonProps}  */
 export interface LinkButtonProps extends ButtonProps {
-  href: LinkProps["href"];
+  to: NavLinkProps["to"];
 }
 
 /** A Chakra Button component that exposes a `ref`.
@@ -12,8 +13,8 @@ export interface LinkButtonProps extends ButtonProps {
  */
 // TODO: Does this link work correctly?
 export const LinkButton = forwardRef<LinkButtonProps, typeof Button>(
-  ({ href, children, ...delegated }: LinkButtonProps, ref) => (
-    <Button ref={ref} as={Link} href={href} {...delegated}>
+  ({ to, children, ...delegated }: LinkButtonProps, ref) => (
+    <Button ref={ref} as={NavLink} to={to} {...delegated}>
       {children}
     </Button>
   )
