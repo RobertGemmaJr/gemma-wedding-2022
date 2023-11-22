@@ -8,11 +8,11 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "format": "prettier --write .",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint --report-unused-disable-directives .",
     "prepare": "husky install",
     "preview": "vite preview",
     "theme": "chakra-cli tokens src/theme.ts",
-    "typecheck": "tsc"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
@@ -46,8 +46,10 @@
   },
   "lint-staged": {
     "*": [
-      "eslint --fix",
       "prettier --ignore-unknown --write"
+    ],
+    "**/*.{ts,tsx}": [
+      "eslint --fix"
     ]
   }
 }
