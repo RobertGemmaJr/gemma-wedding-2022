@@ -1,4 +1,4 @@
-import { GridItem } from "@chakra-ui/react";
+import { GridItem, Box } from "@chakra-ui/react";
 
 import { LayoutFlex, type LayoutFlexProps } from "./LayoutFlex";
 
@@ -10,7 +10,7 @@ export function Main({ children, ...delegated }: MainProps) {
     <GridItem area="main" as="main" bg="gray.50">
       {/* Default Main to top-left corner */}
       <LayoutFlex height="full" justifyContent="flex-start" alignItems="flex-start" {...delegated}>
-        {children}
+        <Box>{children}</Box>
       </LayoutFlex>
     </GridItem>
   );
