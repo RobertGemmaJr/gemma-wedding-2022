@@ -14,6 +14,9 @@ dist
 dist-ssr
 *.local
 
+# Firebase
+.firebase
+
 # Misc.
 .vscode/*
 !.vscode/extensions.json
