@@ -1,63 +1,54 @@
 {
   "name": "gemma-wedding-2022",
-  "version": "1.0.0",
-  "private": true,
-  "description": "gemma-wedding-2022",
+  "version": "0.0.1",
+  "description": "Wedding website for Rob and Nora Gemma",
   "author": "RobertGemmaJr",
-  "keywords": [
-    "gatsby"
-  ],
+  "type": "module",
   "scripts": {
-    "dev": "DISPLAY=chrome gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "lint": "eslint .",
-    "format": "npm run lint -- --fix",
-    "prepare": "husky install"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "format": "prettier --write .",
+    "lint": "eslint --report-unused-disable-directives .",
+    "prepare": "husky install",
+    "preview": "vite preview",
+    "theme": "chakra-cli tokens src/theme.ts",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@chakra-ui/gatsby-plugin": "^3.1.1",
-    "@chakra-ui/icons": "^2.0.18",
-    "@chakra-ui/react": "^2.5.1",
-    "@emotion/react": "^11.10.6",
-    "@emotion/styled": "^11.0.0",
-    "@netlify/plugin-gatsby": "^3.5.2",
-    "framer-motion": "^10.0.1",
-    "gatsby": "^5.7.0",
-    "gatsby-plugin-image": "^3.7.0",
-    "gatsby-plugin-netlify-cms": "^7.7.0",
-    "gatsby-plugin-sharp": "^5.7.0",
-    "gatsby-source-filesystem": "^5.7.0",
-    "gatsby-transformer-sharp": "^5.7.0",
-    "netlify-cms-app": "^2.15.72",
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "framer-motion": "^10.16.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.9.0"
+    "react-icons": "^4.12.0",
+    "vite-tsconfig-paths": "^4.2.1"
   },
   "devDependencies": {
-    "@types/eslint": "^8.4.6",
-    "@types/node": "^20.2.5",
-    "@types/react": "^18.2.8",
-    "@types/react-dom": "^18.2.4",
-    "@typescript-eslint/parser": "^5.57.0",
-    "eslint": "^8.22.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "gatsby-plugin-netlify": "^5.1.0",
-    "gatsby-plugin-tsconfig-paths": "^1.0.6",
+    "@chakra-ui/cli": "^2.4.1",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react-swc": "^3.3.2",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.0",
-    "prettier": "^2.8.7",
-    "prettier-eslint": "^15.0.1",
-    "typescript": "^5.1.3"
-  },
-  "overrides": {
-    "react": "$react",
-    "react-dom": "$react"
+    "lint-staged": "^15.1.0",
+    "pre-commit": "^1.2.2",
+    "prettier": "^3.1.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
   },
   "lint-staged": {
     "*": [
+      "prettier --ignore-unknown --write"
+    ],
+    "**/*.{ts,tsx}": [
       "eslint --fix"
     ]
   }

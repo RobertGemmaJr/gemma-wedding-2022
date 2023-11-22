@@ -1,27 +1,27 @@
-# Gemma Wedding Website
+# React + TypeScript + Vite
 
-Wedding Website created for the Gemma family
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## TODO
+Currently, two official plugins are available:
 
-1. Brand theme from Squarespace
-2. Grid (xma)
-3. Footer (xma)
-4. Header (xma based, just links)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## 🚀 Gatsby
+## Expanding the ESLint configuration
 
-This project is a static website developed with Gastby
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-- [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-- [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-- [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-- [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-- [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+- Configure the top-level `parserOptions` property like this:
 
-## Netlify
+```js
+   parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+   },
+```
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9f541ef8-0f7b-4188-9214-af0e59be6141/deploy-status)](https://app.netlify.com/sites/gemma-wedding-2022/deploys)
-
-This project is deployed on Netlify with Netlify CMS
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list

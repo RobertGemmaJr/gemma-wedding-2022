@@ -8,40 +8,40 @@ export interface NavItem {
 
 // TODO 293: Move to constants folder
 export const STUDIES: NavItem = {
-  label: 'Studies',
-  href: '/studies',
+  label: "Studies",
+  href: "/studies",
   children: [
     {
-      label: 'My Studies',
-      href: '/studies',
+      label: "My Studies",
+      href: "/studies",
     },
     {
-      label: 'All Studies',
-      subLabel: 'View all public studies',
-      href: '/studies/all',
+      label: "All Studies",
+      subLabel: "View all public studies",
+      href: "/studies/all",
     },
   ],
 };
 
 export const DOCUMENTATION: NavItem = {
-  label: 'Documentation',
-  href: 'https://gitbook.brown.edu/xromm/xromm-xmaportal-user-manual',
+  label: "Documentation",
+  href: "https://gitbook.brown.edu/xromm/xromm-xmaportal-user-manual",
   external: true,
 };
 
 export const ADMINISTER: NavItem = {
-  label: 'Administer',
-  href: '/admin',
+  label: "Administer",
+  href: "/admin",
   children: [
     {
-      label: 'Dashboard',
-      subLabel: 'Overview of portal statistics',
-      href: '/admin/dashboard',
+      label: "Dashboard",
+      subLabel: "Overview of portal statistics",
+      href: "/admin/dashboard",
     },
     {
-      label: 'Users',
-      subLabel: 'Edit portal users',
-      href: '/admin/users',
+      label: "Users",
+      subLabel: "Edit portal users",
+      href: "/admin/users",
     },
   ],
 };
