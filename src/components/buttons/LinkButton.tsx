@@ -1,17 +1,20 @@
-import { Button, forwardRef, type ButtonProps } from "@chakra-ui/react";
+import { forwardRef, Button, type ButtonProps, Link, LinkProps } from "@chakra-ui/react";
 
-// TODO: Fix this? Just import from '@components'
-import { LinkOverlay, type LinkOverlayProps } from "@src/components";
-
+/** Extension of {@link ButtonProps}  */
 export interface LinkButtonProps extends ButtonProps {
-  href: LinkOverlayProps["href"];
+  href: LinkProps["href"];
 }
-export const LinkButton = forwardRef<LinkButtonProps, typeof LinkOverlay>(
+
+/** A Chakra Button component that exposes a `ref`.
+ *
+ * Component is styled as Chakra's Button and uses the logic of RemixLink
+ * @param props {@link LinkButtonProps}
+ */
+// TODO: Does this link work correctly?
+export const LinkButton = forwardRef<LinkButtonProps, typeof Button>(
   ({ href, children, ...delegated }: LinkButtonProps, ref) => (
-    <LinkOverlay ref={ref} href={href}>
-      <Button variant="link" {...delegated}>
-        {children}
-      </Button>
-    </LinkOverlay>
+    <Button ref={ref} as={Link} href={href} {...delegated}>
+      {children}
+    </Button>
   )
 );

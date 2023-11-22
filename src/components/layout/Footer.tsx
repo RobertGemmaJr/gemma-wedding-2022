@@ -16,11 +16,11 @@ export function Footer() {
       >
         <Flex gap="2">
           <SocialButton
-            aria-label="Link to Noras Instagram"
+            aria-label="Link to Nora's Instagram"
             href="https://www.instagram.com/eleanor.j.gemma/"
           />
           <SocialButton
-            aria-label="Link to Robs Instagram"
+            aria-label="Link to Rob's Instagram"
             href="https://www.instagram.com/robertgemmajr/"
           />
         </Flex>
