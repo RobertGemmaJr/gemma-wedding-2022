@@ -1,0 +1,18 @@
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBE7b4pqpwE8IHd5hlJcKkbke-Pt0wtFLc",
+  authDomain: "gemma-wedding-2022-7e0cd.firebaseapp.com",
+  projectId: "gemma-wedding-2022-7e0cd",
+  storageBucket: "gemma-wedding-2022-7e0cd.appspot.com",
+  messagingSenderId: "128313567312",
+  appId: "1:128313567312:web:4b239110bb3f462b784955",
+  measurementId: "G-BNYM78Y0WV",
+};
+
+/** Firebase App */
+export const APP = initializeApp(firebaseConfig);
+
+/** Firebase Analytics */
+export const ANALYTICS = getAnalytics(APP);
