@@ -1,14 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import ErrorPage from "@components/ErrorPage.tsx";
+import { ErrorLayout } from "@components/layout";
 
 // Routes
-import Root from "@src/routes/root";
+import IndexRoute from "@src/routes";
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
-    errorElement: <ErrorPage />,
+    element: <IndexRoute />,
+    errorElement: <ErrorLayout />,
   },
 ]);

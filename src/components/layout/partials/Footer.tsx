@@ -1,7 +1,7 @@
 import { GridItem, Flex, Text } from "@chakra-ui/react";
 
 import { SocialButton } from "@components/buttons";
-import { LayoutFlex } from "@components/layout";
+import { LayoutFlex } from "@components/layout/partials";
 
 // The UI for this component is based on a Chakra template https://chakra-templates.dev
 // TODO: Set buttons in center, copyright on the right
