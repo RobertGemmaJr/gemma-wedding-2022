@@ -1,20 +1,19 @@
 import { forwardRef, Button, type ButtonProps } from "@chakra-ui/react";
-import { NavLink, NavLinkProps } from "react-router-dom";
+import { Link, LinkProps } from "react-router-dom";
 
 /** Extension of {@link ButtonProps}  */
 export interface LinkButtonProps extends ButtonProps {
-  to: NavLinkProps["to"];
+  to: LinkProps["to"];
 }
 
-/** A Chakra Button component that exposes a `ref`.
+/** A Chakra Button component that uses the logic of React Router's Link
  *
- * Component is styled as Chakra's Button and uses the logic of RemixLink
  * @param props {@link LinkButtonProps}
  */
-// TODO: Does this link work correctly?
+// TODO: Link to an external page? For the Footer
 export const LinkButton = forwardRef<LinkButtonProps, typeof Button>(
   ({ to, children, ...delegated }: LinkButtonProps, ref) => (
-    <Button ref={ref} as={NavLink} to={to} {...delegated}>
+    <Button ref={ref} as={Link} to={to} {...delegated}>
       {children}
     </Button>
   )
