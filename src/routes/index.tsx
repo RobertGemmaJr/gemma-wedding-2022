@@ -2,17 +2,17 @@ import { Box, Heading, Link, Text } from "@chakra-ui/layout";
 import { Button, Image } from "@chakra-ui/react";
 import { useState } from "react";
 
-import reactLogo from "@src/assets/react.svg";
-import viteLogo from "/vite.svg";
+import { DefaultLayout } from "@components/layout";
 
-// TODO: Color mode
-// TODO: Eslint import order
+// Public assets
+import reactLogo from "/assets/react.svg";
+import viteLogo from "/assets/vite.svg";
 
-export default function App() {
+export default function Index() {
   const [count, setCount] = useState(0);
 
   return (
-    <>
+    <DefaultLayout>
       <Box>
         <Link href="https://vitejs.dev" target="_blank">
           <Image src={viteLogo} className="logo" alt="Vite logo" />
@@ -29,6 +29,6 @@ export default function App() {
         </Text>
       </Box>
       <Text className="read-the-docs">Click on the Vite and React logos to learn more</Text>
-    </>
+    </DefaultLayout>
   );
 }

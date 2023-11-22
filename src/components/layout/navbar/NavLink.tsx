@@ -14,8 +14,10 @@ import {
   type BoxProps,
 } from "@chakra-ui/react";
 
-import { LinkOverlay } from "@src/components";
+// TODO: These will just be links
+// import { LinkOverlay } from "@src/components";
 import type { NavItem } from ".";
+import { LinkButton } from "@components/buttons";
 
 export interface NavLinkProps extends BoxProps {
   variant: "desktop" | "mobile";
@@ -25,7 +27,7 @@ type VariantLinkProps = Omit<NavLinkProps, "variant">;
 
 const NavLinkBox = forwardRef<VariantLinkProps, typeof LinkBox>(
   ({ navItem, children, ...delegated }: VariantLinkProps, ref) => {
-    const { href, external } = navItem;
+    const { href } = navItem;
     return (
       <LinkBox
         ref={ref}
@@ -38,7 +40,8 @@ const NavLinkBox = forwardRef<VariantLinkProps, typeof LinkBox>(
         {...delegated}
       >
         {/* LinkOverlay raises the z-index of the link, contained to LinkBox */}
-        <LinkOverlay href={href} isExternal={external} />
+        {/* TODO: These will just be links */}
+        <LinkButton href={href} />
         {children}
       </LinkBox>
     );
